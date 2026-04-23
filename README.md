@@ -70,12 +70,3 @@ In environments with multiple gateways serving different data classification lev
 ## Conclusion
 
 This tutorial demonstrated how a single Request Lambda Interceptor can implement multiple custom authentication patterns — JWT-to-Basic-Auth credential translation and HMAC-SHA256 request signing — without modifying the agent or the downstream tool. The interceptor routes requests by tool name, retrieves secrets at runtime from Secrets Manager, and transforms authentication headers before the gateway forwards the request. To extend this pattern, add new handler functions for additional authentication schemes (OAuth 2.0 client credentials, mTLS, custom token formats) and update the routing logic in the interceptor's `lambda_handler`.
-
-## Security
-
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
-
-## License
-
-This library is licensed under the MIT-0 License. See the LICENSE file.
-
